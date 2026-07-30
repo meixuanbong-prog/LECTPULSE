@@ -1,0 +1,267 @@
+/* ===========================
+GENERAL
+=========================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #f4f7fc;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container{
+    width: 100%;
+    max-width: 480px;
+}
+
+h1{
+    text-align: center;
+    color: #1E3A8A;
+    font-size: 26px;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.subtitle{
+    text-align: center;
+    color: #64748B;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* ===========================
+MAIN CARD CONTAINER
+=========================== */
+.card{
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+}
+
+/* ===========================
+HEADINGS
+=========================== */
+h2{
+    color: #0f172a;
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.small-text{
+    color: #64748B;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+/* ===========================
+INPUTS & TEXTAREA
+=========================== */
+label{
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 13px;
+    color: #475569;
+}
+
+input{
+    width: 100%;
+    padding: 14px 16px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 14px;
+    font-size: 15px;
+    margin-bottom: 16px;
+    background: #f8fafc;
+    transition: all 0.2s ease;
+}
+
+input:focus{
+    outline: none;
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+textarea{
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 1.5px solid #cbd5e1;
+    resize: none;
+    font-size: 15px;
+    background: #f8fafc;
+    margin-bottom: 12px;
+    transition: all 0.2s ease;
+}
+
+textarea:focus{
+    outline: none;
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+/* ===========================
+BUTTONS
+=========================== */
+button{
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+/* Attendance Submit Button */
+.submit-btn{
+    width: 100%;
+    padding: 14px;
+    background: #2563eb;
+    color: white;
+    border-radius: 14px;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.submit-btn:hover{
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.submit-btn:active{
+    transform: scale(0.98);
+}
+
+/* Feedback Buttons (Understand / Not Understand) */
+.feedback{
+    width: 100%;
+    padding: 15px;
+    margin-top: 8px;
+    border-radius: 14px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.green{
+    background: #dcfce7;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.green:hover{
+    background: #bbf7d0;
+}
+
+.red{
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+.red:hover{
+    background: #fecaca;
+}
+
+/* Request Button */
+.request-btn{
+    width: 100%;
+    padding: 14px;
+    background: #7c3aed;
+    color: white;
+    border-radius: 14px;
+    font-size: 15px;
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
+}
+
+.request-btn:hover{
+    background: #6d28d9;
+}
+
+/* WhatsApp Button */
+.contact-btn{
+    width: 100%;
+    padding: 14px;
+    background: #22c55e;
+    color: white;
+    border-radius: 14px;
+    font-size: 15px;
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.2);
+}
+
+.contact-btn:hover{
+    background: #16a34a;
+}
+
+/* ===========================
+STATUS TEXT
+=========================== */
+#attendanceStatus, #feedbackStatus{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* ===========================
+LECTURER CARD (参照第二张精致风格)
+=========================== */
+.lecturer-card{
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 20px;
+    text-align: left;
+    margin-top: 10px;
+}
+
+/* ===========================
+DIVIDER
+=========================== */
+hr{
+    border: none;
+    height: 1px;
+    background: #f1f5f9;
+    margin: 24px 0;
+}
+
+/* ===========================
+MOBILE RESPONSIVE
+=========================== */
+@media(max-width: 480px){
+    body{
+        padding: 12px;
+    }
+    .card{
+        padding: 20px;
+        border-radius: 20px;
+    }
+}
+
+/* Feedback 按钮点击后的持续高亮状态（与 hover 颜色一致） */
+.feedback.active-green {
+    background: #bbf7d0 !important;
+    color: #166534 !important;
+    border-color: #86efac !important;
+    box-shadow: 0 4px 12px rgba(22, 101, 52, 0.15);
+}
+
+.feedback.active-red {
+    background: #fecaca !important;
+    color: #991b1b !important;
+    border-color: #fca5a5 !important;
+    box-shadow: 0 4px 12px rgba(153, 27, 27, 0.15);
+}

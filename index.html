@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LectPulse - Student Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>LectPulse</h1>
+        <p class="subtitle">Student Attendance & Feedback Portal</p>
+
+        <div class="card">
+            
+            <!-- 1. Current Lecturer (调整排版：Subject 在名字下一行) -->
+            <h2>Current Lecturer</h2>
+            <div class="lecturer-card">
+                <p style="font-size: 12px; color: #666; font-weight: bold; margin-bottom: 2px;">LECTURER</p>
+                <p id="lecturerName" style="font-size: 18px; font-weight: bold; color: #000; margin-bottom: 2px;">Loading...</p>
+                <p id="lecturerSubject" style="font-size: 14px; font-weight: 600; color: #2563eb; margin-bottom: 15px;">Subject: -</p>
+
+                <p style="font-size: 12px; color: #666; font-weight: bold; margin-bottom: 2px;">CONSULTATION HOURS</p>
+                <p id="lecturerSchedule" style="font-size: 15px; color: #333; margin-bottom: 20px; white-space: pre-line;">Loading...</p>
+
+                <button class="contact-btn" onclick="openWhatsApp()">
+                    💬 WhatsApp Lecturer
+                </button>
+            </div>
+
+            <hr>
+
+            <!-- 2. Attendance -->
+            <h2>Attendance</h2>
+            <label for="studentID">Student ID</label>
+            <input type="text" id="studentID" placeholder="Enter your Student ID">
+            
+            <button class="submit-btn" onclick="submitAttendance()">
+                📍 Submit Attendance
+            </button>
+            
+            <p id="attendanceStatus"></p>
+
+            <hr>
+
+            <!-- 3. Feedback -->
+            <h2>Live Feedback</h2>
+            <p class="small-text">Let your lecturer know how you are feeling about the current pace.</p>
+            
+            <button id="btnUnderstand" class="feedback green" onclick="submitFeedback('Understand')">
+                👍 Understand
+            </button>
+            <button id="btnNotUnderstand" class="feedback red" onclick="submitFeedback('Not Understand')">
+                👎 Not Understand
+            </button>
+            
+            <p id="feedbackStatus"></p>
+
+            <hr>
+
+            <!-- 4. Form Request (Pre-fill 逻辑已自动生效) -->
+            <h2>Form Request</h2>
+            <label for="lecturerRequest">Request Details</label>
+            <textarea id="lecturerRequest" rows="3" placeholder="Enter your request or question"></textarea>
+            
+            <button class="request-btn" onclick="sendRequest()">
+                🚀 Send Request
+            </button>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
